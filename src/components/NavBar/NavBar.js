@@ -41,7 +41,11 @@ const useStyles = makeStyles((theme) => ({
     '& .active': {
       borderBottom: 'solid 2px #00dbd0;'
     }
-
+  },
+  btn: {
+    color: theme.palette.text.primary,
+    padding: theme.spacing(1, 4),
+    borderRadius: '10px'
   }
 }));
 
@@ -65,7 +69,7 @@ const NavBar = () => {
               <Button>Products</Button>
               <Button>Blog</Button>
               <Button>About Us</Button>
-              <Button variant='outlined' color='primary'>Contact</Button>
+              <Button className={classes.btn} variant='outlined' color='primary'>Contact</Button>
             </Box>
           </Hidden>
           <Hidden mdUp>

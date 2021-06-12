@@ -20,6 +20,7 @@ const Services = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br />
           incididunt ut labore et dolore magna aliqua.
         </Typography>
+
         <Box mt={8}>
           <Grid container spacing={4}>
             {services.map((service, id) => (

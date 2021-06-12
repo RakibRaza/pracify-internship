@@ -9,7 +9,6 @@ import {
   List,
   ListItem,
   ListItemText,
-  makeStyles,
   Toolbar,
   Typography,
 } from "@material-ui/core";
@@ -18,32 +17,8 @@ import React, { useState } from "react";
 import logo from '../../asset/logo.png'
 import { Link } from "react-router-dom";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
-const useStyles = makeStyles((theme) => ({
-  drawer: {
-    width: "250px",
-  },
-  navBar: {
-    background: 'none',
-    boxShadow: 'none'
-  },
-  logo: {
-    display: 'flex',
-    alignItems: 'center',
-    '& h4': {
-      fontWeight: 'bold'
-    }
-  },
-  link: {
-    '& > *': {
-      margin: theme.spacing(0, 3),
-      borderRadius: '0px'
-    },
-    '& .active': {
-      borderBottom: 'solid 2px #00dbd0;'
-    }
+import { useStyles } from "./NavBarStyle";
 
-  }
-}));
 
 const NavBar = () => {
   const classes = useStyles();
@@ -65,7 +40,7 @@ const NavBar = () => {
               <Button>Products</Button>
               <Button>Blog</Button>
               <Button>About Us</Button>
-              <Button variant='outlined' color='primary'>Contact</Button>
+              <Button className={classes.btn} variant='outlined' color='primary'>Contact</Button>
             </Box>
           </Hidden>
           <Hidden mdUp>
@@ -77,13 +52,16 @@ const NavBar = () => {
             <Drawer open={open} onClose={() => setOpen(false)}>
               <List disablePadding className={classes.drawer}>
                 <ListItem button>
-                  <ListItemText primary="News" />
+                  <ListItemText primary="Home" />
                 </ListItem>
                 <ListItem button>
-                  <ListItemText primary="Destination" />
+                  <ListItemText primary="Products" />
                 </ListItem>
                 <ListItem button>
                   <ListItemText primary="Blog" />
+                </ListItem>
+                <ListItem button>
+                  <ListItemText primary="About Us" />
                 </ListItem>
                 <ListItem button>
                   <ListItemText primary="Contact" />

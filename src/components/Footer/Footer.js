@@ -1,52 +1,20 @@
-import { Grid, makeStyles, Typography, IconButton } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import React from "react";
 import logo from '../../asset/footer-logo.png'
-import backgroundImage from '../../asset/footer-bg.png'
 import { Container } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { Box } from "@material-ui/core";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
-const useStyles = makeStyles((theme) => ({
-  footer: {
-    background: `url(${backgroundImage}) no-repeat`,
-    padding: theme.spacing(17, 0, 7),
-    backgroundSize: 'cover',
-    color: '#fff',
-    '& a': {
-      color: '#fff',
-      display: 'block',
-      textDecoration: 'none',
-      marginTop: theme.spacing(3),
-      fontSize: '14px',
-    },
-  },
-  underline: {
-    width: '80px',
-    height: '3px',
-    background: theme.palette.primary.main,
-    margin: theme.spacing(1, 0)
-  },
-  icon: {
-    '& > *': {
-      color: theme.palette.secondary.main,
-      background: '#fff',
-      width: '30px',
-      height: '30px',
-      borderRadius: '50%',
-      marginRight: theme.spacing(2),
-      marginTop: theme.spacing(2),
-      padding: '3px',
-      cursor: 'pointer'
-    }
-  }
-}));
-function Copyright() {
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { useStyles } from "./FooterStyle";
+
+const Copyright = () => {
   return (
     <Typography variant="subtitle1">{"Copyright © "} {new Date().getFullYear()} Nature</Typography>
   );
 }
 const Footer = () => {
   const classes = useStyles();
+
   return (
     <footer className={classes.footer}>
       <Container>

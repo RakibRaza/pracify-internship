@@ -1,15 +1,17 @@
 import { Box, Container, Grid, Typography } from "@material-ui/core";
-import React, { useState } from "react";
+import React from "react";
+import logo from '../../asset/service-logo.png'
+import service1 from '../../asset/service-1.png'
+import service2 from '../../asset/service-2.png'
 
-import Service from "../Service/Service";
 const Services = () => {
-  const [services, setServices] = useState([]);
+  const services = [service1, service2, service1, service1]
 
   return (
     <Box pb={10}>
       <Container>
-        <Box>
-          <img src="" alt="" />
+        <Box align='center' mb={1}>
+          <img src={logo} alt="logo" />
         </Box>
         <Typography variant="h4" gutterBottom align="center">
           Welcome to Nature
@@ -18,11 +20,17 @@ const Services = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br />
           incididunt ut labore et dolore magna aliqua.
         </Typography>
-        <Grid container spacing={4}>
-          {services.map((service) => (
-            <Service key={service._id} {...service} />
-          ))}
-        </Grid>
+        <Box mt={8}>
+          <Grid container justify='center' spacing='4'>
+            {services.map((service, id) => (
+              <Grid key={id} item xs={12} sm={6} md={4} lg={3}>
+                <Box>
+                  <img style={{ display: 'block', margin: 'auto' }} src={service} alt="" />
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
       </Container>
     </Box>
   );

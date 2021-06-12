@@ -7,10 +7,10 @@ const blog = [
     id: 1, title: 'Blog Post One', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.', image: blog1
   },
   {
-    id: 2, title: 'Blog Post One', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.', image: blog2
+    id: 2, title: 'Blog Post Two', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.', image: blog2
   },
   {
-    id: 3, title: 'Blog Post One', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.', image: blog3
+    id: 3, title: 'Blog Post Three', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.', image: blog3
   },
 ]
 export default blog

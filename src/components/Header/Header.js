@@ -24,6 +24,10 @@ const useStyles = makeStyles((theme) => ({
   imgContainer: {
     position: 'relative',
     zIndex: '1',
+    '& .flower': {
+      display: 'block',
+      width: '80%'
+    },
     '& .flower-2': {
       width: '250px',
       padding: '65px',

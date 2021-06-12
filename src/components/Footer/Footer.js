@@ -5,7 +5,7 @@ import backgroundImage from '../../asset/footer-bg.png'
 import { Container } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { Box } from "@material-ui/core";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 const useStyles = makeStyles((theme) => ({
   footer: {
     background: `url(${backgroundImage}) no-repeat`,

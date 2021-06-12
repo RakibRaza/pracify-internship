@@ -55,7 +55,7 @@ const NavBar = () => {
         <Toolbar>
           <Box style={{ flexGrow: 1 }} className={classes.logo}>
             <img width='50px' src={logo} alt="logo" />
-            <Typography variant="h4">
+            <Typography color='textPrimary' variant="h4">
               organic
             </Typography>
           </Box>

@@ -3,7 +3,7 @@ import React from 'react'
 import NavBar from '../NavBar/NavBar'
 import flower from '../../asset/header.png'
 import flower2 from '../../asset/header-2.png'
-import { Hidden } from '@material-ui/core';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundImage: "linear-gradient(to bottom, #f1fefe, rgba(241,254,254,0))",
@@ -45,7 +45,7 @@ const Header = () => {
               Nature Organic
             </Typography>
             <Box maxWidth={380}>
-              <Typography paragraph color='textSecondary'>
+              <Typography paragraph>
                 Vegetables are the edible parts of a plant
                 that is used in cooking or can be eaten now.
               </Typography>

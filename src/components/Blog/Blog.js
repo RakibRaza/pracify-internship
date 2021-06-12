@@ -27,17 +27,17 @@ const Blog = () => {
         <Typography variant="h4" gutterBottom align="center">
           Read Our Blog
         </Typography>
-        <Typography align="center" color='textSecondary' >
+        <Typography align="center">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br />
           incididunt ut labore et dolore magna aliqua.
         </Typography>
         <Box mt={8}>
-          <Grid container justify='center' spacing='4'>
-            {blog.map(item => <Grid item xs={12} sm={6} md={3}>
+          <Grid container justify='center' spacing={4}>
+            {blog.map(item => <Grid key={item.id} item xs={12} sm={6} md={3}>
               <Box align='center' className={classes.blog}>
                 <img src={item.image} alt={item.title} />
                 <Typography color='primary' variant='h6' gutterBottom>{item.title}</Typography>
-                <Typography color='textSecondary' paragraph>{item.desc}</Typography>
+                <Typography paragraph>{item.desc}</Typography>
                 <Button>Read More</Button>
               </Box>
             </Grid>)}

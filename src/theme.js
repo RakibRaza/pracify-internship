@@ -5,12 +5,18 @@ export const theme = createMuiTheme({
     primary: {
       main: "#00DBD0",
     },
+    secondary: {
+      main: '#374b5c'
+    },
     background: {
       default: '#fff'
+    },
+    text: {
+      primary: '#374b5c'
     }
   },
   typography: {
-    fontFamily: "'Libre Baskerville', serif"
+    fontFamily: "'Libre Baskerville', serif",
   },
   overrides: {
     MuiButton: {

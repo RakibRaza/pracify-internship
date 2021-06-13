@@ -1,7 +1,16 @@
 import { Box, Container, Typography, TextField, Button, makeStyles } from '@material-ui/core'
 import React from 'react'
+import sideImg from '../../asset/side-img.png'
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    position: 'relative',
+    '& img': {
+      position: 'absolute',
+      bottom: '0px',
+      left: '-650px'
+    }
+  },
   form: {
     position: "relative",
     margin: theme.spacing(10, 0),
@@ -26,7 +35,7 @@ const useStyles = makeStyles(theme => ({
 const NewsLetter = () => {
   const classes = useStyles()
   return (
-    <Box pt={10} pb={5}>
+    <Box className={classes.root} pt={10} pb={5}>
       <Container>
         <Typography variant="h4" gutterBottom align="center">
           Subscribe to Our Newsletter
@@ -46,6 +55,7 @@ const NewsLetter = () => {
           </form>
         </Container>
       </Container>
+      <img src={sideImg} alt="flower" />
     </Box>
   )
 }
